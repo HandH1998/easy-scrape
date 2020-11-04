@@ -1,3 +1,8 @@
-from urllib.request import import urlopen
+from urllib.request import urlopen
+import re
 
-html=urlopen("https://github.com/MorvanZhou/easy-scraping-tutorial").
+# 有中文的话，decode()
+html = urlopen("https://github.com/MorvanZhou/easy-scraping-tutorial") \
+    .read().decode('utf-8')
+print(html)
+res=re.findall(r"<title>(.+?)")
