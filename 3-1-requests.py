@@ -34,3 +34,4 @@ print(r.cookies.get_dict())
 # session会话会把多次http请求联系在一起
 r=session.get('http://pythonscraping.com/pages/cookies/profile.php')
 print(r.text)
+print(r.url)
